@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from photos.views import get_detection
+
+import sys
+sys.path.append("..")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/handle-detection/', get_detection, name="asdf")
 ]
