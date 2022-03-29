@@ -10,7 +10,7 @@ def get_detected_objs(file_name):
     # Load Yolo
     net = cv2.dnn.readNet(prefix+"yolov3-tiny.weights", prefix+"yolov3-tiny.cfg")
     classes = []
-    with open(prefix+"coco.names", "r") as f:
+    with open(prefix+"coco_eng.names", "r") as f:
         classes = [line.strip() for line in f.readlines()]
     layer_names = net.getLayerNames()
     output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
