@@ -1,0 +1,40 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "D:\\Users\\yunyo\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+      "-C",
+      "D:\\Users\\yunyo\\teamproject6\\app\\.cxx\\RelWithDebInfo\\435o2v44\\x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "D:\\Users\\yunyo\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "-C",
+    "D:\\Users\\yunyo\\teamproject6\\app\\.cxx\\RelWithDebInfo\\435o2v44\\x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "teamproject6-RelWithDebInfo-x86_64": {
+      "buildCommandComponents": [
+        "D:\\Users\\yunyo\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "-C",
+        "D:\\Users\\yunyo\\teamproject6\\app\\.cxx\\RelWithDebInfo\\435o2v44\\x86_64",
+        "teamproject6"
+      ],
+      "buildType": "release",
+      "abi": "x86_64",
+      "artifactName": "teamproject6",
+      "output": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\cxx\\RelWithDebInfo\\435o2v44\\obj\\x86_64\\libteamproject6.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

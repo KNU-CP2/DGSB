@@ -1,0 +1,150 @@
+[
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_main_round.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_main_round.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_main.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-mdpi\\ic_main.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_main.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-hdpi\\ic_main.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_camera.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\layout\\activity_camera.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_main.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_main.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_main.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_main.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_main_round.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_main_round.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_main_foreground.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xhdpi\\ic_main_foreground.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_main_foreground.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_main_foreground.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_main.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xhdpi\\ic_main.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\layout\\dialog.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_main_round.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-hdpi\\ic_main_round.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_main_foreground.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_main_foreground.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_main_background.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\drawable\\ic_main_background.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_main_round.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_main_round.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\drawable_drawable_radius.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\drawable\\drawable_radius.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_main_round.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-mdpi\\ic_main_round.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_main_round.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xhdpi\\ic_main_round.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_main.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_main.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_main_foreground.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-mdpi\\ic_main_foreground.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_main_foreground.png.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-hdpi\\ic_main_foreground.png"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    }
+]

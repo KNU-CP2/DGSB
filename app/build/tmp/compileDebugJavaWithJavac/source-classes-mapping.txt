@@ -1,0 +1,10 @@
+com/example/teamproject6/databinding/ActivityMainBinding.java
+ com.example.teamproject6.databinding.ActivityMainBinding
+com/example/teamproject6/BuildConfig.java
+ com.example.teamproject6.BuildConfig
+com/example/teamproject6/databinding/ActivitySplashBinding.java
+ com.example.teamproject6.databinding.ActivitySplashBinding
+com/example/teamproject6/databinding/ActivityCameraBinding.java
+ com.example.teamproject6.databinding.ActivityCameraBinding
+com/example/teamproject6/databinding/DialogBinding.java
+ com.example.teamproject6.databinding.DialogBinding

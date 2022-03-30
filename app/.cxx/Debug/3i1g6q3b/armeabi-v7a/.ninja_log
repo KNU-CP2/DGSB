@@ -1,0 +1,9 @@
+# ninja log v5
+2	93	0	clean	577bc002c0bafc13
+1	92	0	clean	577bc002c0bafc13
+3	14128	669921464	CMakeFiles/native-lib.dir/native-lib.cpp.o	27d3e3c1653a6621
+14150	17300	669921467	D:/Users/yunyo/teamproject6/app/build/intermediates/cxx/Debug/3i1g6q3b/obj/armeabi-v7a/libnative-lib.so	cf5ca18dd3d551e0
+0	39	0	clean	577bc002c0bafc13
+1	52	0	clean	577bc002c0bafc13
+39	8217	670060443	CMakeFiles/native-lib.dir/native-lib.cpp.o	27d3e3c1653a6621
+8218	9309	670060444	D:/Users/yunyo/teamproject6/app/build/intermediates/cxx/Debug/3i1g6q3b/obj/armeabi-v7a/libnative-lib.so	cf5ca18dd3d551e0

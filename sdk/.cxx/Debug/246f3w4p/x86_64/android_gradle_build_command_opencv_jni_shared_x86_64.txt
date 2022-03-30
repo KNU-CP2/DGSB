@@ -1,0 +1,7 @@
+Executable : D:\Users\yunyo\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+D:\Users\yunyo\teamproject6\sdk\.cxx\Debug\246f3w4p\x86_64
+opencv_jni_shared
+jvmArgs : 
+

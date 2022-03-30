@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog.xml",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\layout\\dialog.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_camera.xml",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\layout\\activity_camera.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Users\\yunyo\\teamproject6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
+        "source": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    }
+]
