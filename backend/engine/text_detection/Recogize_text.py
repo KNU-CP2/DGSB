@@ -6,7 +6,7 @@ import pytesseract
 import regex
 import math
 
-from Process_img import ProcessImage
+from .Process_img import ProcessImage
 #from Searchword import SearchKorWord
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -15,6 +15,14 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 class Text() :
     
     __word = ''
+
+    def is_detected(self):
+        if self.__word:
+            return True
+        return False
+
+    def return_word(self):
+        return self.__word
 
     def clear_word(self):
         self.__word = ''
@@ -71,9 +79,8 @@ class Text() :
         possible_contour = []
         contour = []
         last_contour = []
-        
-        print(results['text'])
-        for i in range(len(results['text'])): 
+
+        for i in range(len(results['text'])):
             conf = float(results['conf'][i])
                
             
@@ -140,8 +147,6 @@ class Text() :
         # 박스 그리기용
         one_word_box = [0,0,0,0]
 
-        print(possible_contour)
-
 
         for c in possible_contour :      
             if c :
@@ -152,7 +157,6 @@ class Text() :
                                          incline, intercept, start, end):
                     
                     now_dist = self.word_dist(x,y,width,height,end) 
-                    print("now_dist %f"%(now_dist))
                     if(max_dist > now_dist):
                         near_word = word
                         one_word_box = [x, y, width, height]
@@ -160,15 +164,11 @@ class Text() :
                     
                  
         # 손가락에서 가장 가까운 단어가 추출됐다면 
-        if near_word :    
-            #if self.is_hanguel(near_word) :
-            #    near_word = SearchKorWord(near_word)
-            
-            if near_word == self.__word :
-                print("already found")
-                return 
+        if near_word :
+            # if near_word == self.__word:
+            #     print("already found")
+            #     return
 
-            print("최종 검출 단어 : " + near_word)
             self.__word = near_word
             image = cv2.rectangle(image,(one_word_box[0],one_word_box[1]),
                                     (one_word_box[0]+one_word_box[2],one_word_box[1]+one_word_box[3]),(255,255,0),1)

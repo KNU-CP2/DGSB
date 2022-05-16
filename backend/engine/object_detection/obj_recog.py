@@ -17,8 +17,6 @@ def get_detected_objs(file_name):
     colors = np.random.uniform(0, 255, size=(len(classes), 3))
     img = cv2.imread('raw/'+file_name)
     # img = cv2.resize(img, None, fx=0.4, fy=0.4)
-    print(file_name)
-    print(img)
     height, width, channels = img.shape
 
     blob = cv2.dnn.blobFromImage(img, 0.00392, (416, 416), (0, 0, 0), True, crop=False)

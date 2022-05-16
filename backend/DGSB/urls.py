@@ -22,5 +22,5 @@ sys.path.append("..")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/handle-detection/', get_detection, name="asdf")
+    path('api/handle-detection/', get_detection)
 ]
