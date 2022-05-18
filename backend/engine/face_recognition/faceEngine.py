@@ -12,13 +12,13 @@ class FaceRecog():
         # Using OpenCV to capture from device 0. If you have trouble capturing
         # from a webcam, comment the line below out and use a video file
         # instead.
-        self.camera = camera.VideoCamera()
+        #self.camera = camera.VideoCamera()
 
         self.known_face_encodings = []
         self.known_face_names = []
-
         # Load sample pictures and learn how to recognize it.
-        dirname = './dataset'
+        dirname = '/Users/macbook/Desktop/Project/DGSB/backend/engine/face_recognition/dataset'
+
         files = os.listdir(dirname)
         print(files)
         for filename in files:
@@ -46,11 +46,12 @@ class FaceRecog():
         self.process_this_frame = True
 
     def __del__(self):
-        del self.camera
+        pass
+#        del self.camera
 
     def get_frame(self):
         # Grab a single frame of video
-        frame = self.camera.get_frame()
+        #frame = self.camera.get_frame()
 
         # Resize frame of video to 1/4 size for faster face recognition processing
         rgb_small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
@@ -179,7 +180,8 @@ def set_detected_face(face_id, listOfImage):
                     #             (0, 255, 0), 2)
                     y = top - 15 if top - 15 > 15 else top + 15
                     count += 1
-                    cv2.imwrite("./dataset/User." + str(face_id) + '.' + str(count) + ".jpg", rgb_small_frame[top: bottom, left:right])
+                    print(os.getcwd())
+                    cv2.imwrite(dirname + "/User." + str(face_id) + '.' + str(count) + ".jpg", rgb_small_frame[top: bottom, left:right])
                 # 종료조건
                 if cv2.waitKey(1) > 0:
                     break  # 키 입력이 있을 때 반복문 종료
@@ -192,7 +194,7 @@ def set_detected_face(face_id, listOfImage):
         print("\n [INFO] Exiting Program and cleanup stuff")
         #learning
 
-        dataset = "./dataset"
+        dataset = dirname
         encodingDirectory = "./encoding.pickle"
         detectionMethod = "hog"
 
@@ -282,7 +284,7 @@ if __name__ == '__main__':
                               (0, 255, 0), 2)
                 y = top - 15 if top - 15 > 15 else top + 15
                 count += 1
-                cv2.imwrite("./dataset/User." + str(face_id) + '.' + str(count) + ".jpg", rgb_small_frame[top: bottom, left:right])
+                cv2.imwrite(dirname + "/User." + str(face_id) + '.' + str(count) + ".jpg", rgb_small_frame[top: bottom, left:right])
             # cv2.imwrite("./dataset/User." + str(face_id) + '.' + str(count) + ".jpg", rgb)
             # count += 1
             # for (x, y, w, h) in boxes:
@@ -311,7 +313,7 @@ if __name__ == '__main__':
         import os
         import numpy as np
 
-        dataset = "./dataset"
+        dataset = dirname
         encodingDirectory = "./encoding.pickle"
         detectionMethod = "hog"
 
@@ -357,7 +359,7 @@ if __name__ == '__main__':
 
         import face_recognition
         import cv2
-        import camera
+        #import camera
         import os
         import numpy as np
 
