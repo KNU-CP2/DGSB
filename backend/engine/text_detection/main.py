@@ -39,6 +39,8 @@ def get_detected_text(file_name):
                 if tx.is_detected():
                     detected_word = tx.return_word()
                     print(detected_word)
+                    return detected_word
+
 
                 # mp_drawing.draw_landmarks(image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
 

@@ -9,11 +9,11 @@ import math
 from .Process_img import ProcessImage
 #from Searchword import SearchKorWord
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 
 class Text() :
-    
+
     __word = ''
 
     def is_detected(self):
@@ -133,8 +133,8 @@ class Text() :
         #2
         gry_img = ProcessImage.extract_for_Gray(image)
       
-        results_bgr = pytesseract.image_to_data(bgr_img, lang="ENG+KOR", output_type=pytesseract.Output.DICT)
-        results_gry = pytesseract.image_to_data(gry_img, lang="ENG+KOR", output_type=pytesseract.Output.DICT)
+        results_bgr = pytesseract.image_to_data(bgr_img, lang="eng+kor", output_type=pytesseract.Output.DICT)
+        results_gry = pytesseract.image_to_data(gry_img, lang="eng+kor", output_type=pytesseract.Output.DICT)
         
         possible_contour = []
         
