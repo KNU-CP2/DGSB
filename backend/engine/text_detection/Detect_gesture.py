@@ -1,16 +1,19 @@
-# -*- coding: cp949 -*-
+# -*- coding: utf-8 -*-
 
+from os import startfile
 import mediapipe as mp
 import cv2
 import math
-from .Recogize_text import *
-
+import Recogize_text
 
 class Gesture() :
 
+    # hand_landmark에서의 손가락 좌표는 0.0~1.0
+    # 화면의 비율에 맞게 수정하기 위한 ratio
     window_x = 0
     window_y = 0
 
+    # 기울기, y 절편
     incline = 0
     intercept = 0
 
@@ -20,7 +23,8 @@ class Gesture() :
     def set_window_xy(self, x, y):
         self.window_x = x
         self.window_y = y
-
+    
+    # 손가락 검지에 대응하는 직선 방정식 구하기
     def Make_equation(self,img, finger7_x, finger7_y, finger8_x, finger8_y):
   
         # y = ax + b
@@ -31,6 +35,7 @@ class Gesture() :
         
         self.start = (finger7_x, finger7_y)
 
+        # text 찾기용
         if finger7_x < finger8_x :
             self.end = (self.window_x , self.window_x*self.incline + self.intercept)
         elif finger7_x > finger8_x :
@@ -40,7 +45,8 @@ class Gesture() :
                 self.end = (finger7_x, 1)
             else:
                 self.end = (finger7_x, self.window_y)
-
+        
+        # 그리기용
         #if int(finger8_y) - int(finger7_y) == 0 :
         #    return
     
@@ -92,9 +98,11 @@ class Gesture() :
         sec_dist = self.dist(sec_x,sec_y, wrist_x,wrist_y)
         sec_std_dist = self.dist(sec_std_x,sec_std_y, wrist_x,wrist_y)
 
+        # 검지 손가락이 접혀 있으면 return
         if sec_dist < sec_std_dist :
             return
 
+        # 3,4,5 번째 손가락이 접혀있다면 DrawLine(Text 인식)
         tip_pos = 12
         std_pos = 10
         
@@ -114,6 +122,8 @@ class Gesture() :
             std_pos = std_pos + 4
 
 
+        
+        # 가리키는 손동작이라면 진행        
         if point_out_something :     
             
             
