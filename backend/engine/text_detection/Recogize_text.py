@@ -8,7 +8,7 @@ import math
 
 #import Searchword
 
-from Process_img import ProcessImage
+from .Process_img import ProcessImage
 
 # pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
@@ -141,12 +141,6 @@ class Text() :
  
         #2
         gry_img = ProcessImage.extract_for_Gray(image)
-<<<<<<< Updated upstream
-      
-        results_bgr = pytesseract.image_to_data(bgr_img, lang="eng+kor", output_type=pytesseract.Output.DICT)
-        results_gry = pytesseract.image_to_data(gry_img, lang="eng+kor", output_type=pytesseract.Output.DICT)
-        
-=======
         
         #3
         org_img = image
@@ -155,7 +149,6 @@ class Text() :
         results_gry = pytesseract.image_to_data(gry_img, lang="ENG+KOR", output_type=pytesseract.Output.DICT)
         results_org = pytesseract.image_to_data(org_img, lang="ENG+KOR", output_type=pytesseract.Output.DICT)
 
->>>>>>> Stashed changes
         possible_contour = []
         
         possible_contour = self.Make_PossibleContour(results_bgr)
