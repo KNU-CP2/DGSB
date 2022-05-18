@@ -3,13 +3,98 @@ import imutils as imutils
 import numpy as np
 import os
 import face_recognition
-
+from imutils import paths
+import pickle
+    
 mode = int(input("모드를 선택하세요 . 1. 등록 2.학습\n"))
+
+def set_detected_face(face_id, listOfImage):
+    try:
+        count = 0
+        for file_name in listOfImage:
+            rgb_small_frame = cv2.imread('raw/' + file_name)
+            r = rgb_small_frame.shape[1] / float(rgb_small_frame.shape[1])
+            boxes = face_recognition.face_locations(rgb_small_frame)
+            # 얼굴에 대해 rectangle 출력
+            try:
+                for (top, right, bottom, left) in boxes:
+                    # rescale the face coordinates
+                    rtop = int(top * r)
+                    rright = int(right * r)
+                    rbottom = int(bottom * r)
+                    rleft = int(left * r)
+                    # draw the predicted face name on the image
+                    # cv2.rectangle(frame, (rleft, rtop), (rright, rbottom),
+                    #             (0, 255, 0), 2)
+                    y = top - 15 if top - 15 > 15 else top + 15
+                    count += 1
+                    cv2.imwrite("./dataset/User." + str(face_id) + '.' + str(count) + ".jpg", rgb_small_frame[top: bottom, left:right])
+                # 종료조건
+                if cv2.waitKey(1) > 0:
+                    break  # 키 입력이 있을 때 반복문 종료
+                elif count >= 100:
+                    return "Success"
+                    break  # 100 face sample
+            except Exception as e:
+                print(e)
+                return "Fail"
+
+        print("\n [INFO] Exiting Program and cleanup stuff")
+        #learning
+
+        dataset = "./dataset"
+        encodingDirectory = "./encoding.pickle"
+        detectionMethod = "hog"
+
+        with open(encodingDirectory, "rb") as f:
+            lastData = pickle.load(f)
+
+        print("[INFO] quantifying faces....")
+        imagePaths = list(paths.list_images(dataset))
+        knownEncodings = []
+        knownNames = []
+        # loop over the image paths
+        for (i, imagePath) in enumerate(imagePaths):
+            # extract the person name from the image path
+            print("[INFO] processing image {}/{}".format(i + 1,
+                                                         len(imagePaths)))
+            name = imagePath.split(".")[-3]
+            # load the input image and convert it from BGR (OpenCV ordering)
+            # to dlib ordering (RGB)
+            image = cv2.imread(imagePath)
+            rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            boxes = face_recognition.face_locations(rgb)
+            # compute the facial embedding for the face
+            encodings = face_recognition.face_encodings(rgb, boxes)
+            # loop over the encodings
+            for encoding in encodings:
+                # add each encoding + name to our set of known names and
+                # encodings
+                knownEncodings.append(encoding)
+                knownNames.append(name)
+        print("[INFO] serializing encodings...")
+        data = {"encodings": knownEncodings, "names": knownNames}
+        f = open(encodingDirectory, "wb")
+        f.write(pickle.dumps(data))
+        f.close()
+        return "Success"
+    except Exception as e:
+        return "Fail"
+
+def get_detected_face(file_name):
+    face_recog = FaceRecog()
+    print("start")
+    print(face_recog.known_face_names)
+    nameList = face_recog.get_frame(file_name)
+    return nameList
+
 
 if mode == 1:
     faceCascade = cv2.CascadeClassifier("./haarcascade_frontface.xml")
 
-    capture = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    capture = cv2.VideoCapture(0)
+
+    print(capture)
     capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
     capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
@@ -72,7 +157,6 @@ elif mode == 2:
     import pickle
     import cv2
     import os
-    import cv2
     import numpy as np
 
     dataset = "./dataset"
@@ -80,14 +164,20 @@ elif mode == 2:
     detectionMethod = "hog"
 
     print("[INFO] quantifying faces....")
+    data = {"encodings": [], "names": []}
+    if os.path.exists(encodingDirectory):
+        with open(encodingDirectory, "rb") as f:
+            lastData = pickle.load(f)
+        print(lastData)
+        data = lastData
+
     imagePaths = list(paths.list_images(dataset))
-    knownEncodings = []
-    knownNames = []
+    knownEncodings = data["encodings"]
+    knownNames = data["names"]
     # loop over the image paths
     for (i, imagePath) in enumerate(imagePaths):
         # extract the person name from the image path
-        print("[INFO] processing image {}/{}".format(i + 1,
-                                                     len(imagePaths)))
+        print("[INFO] processing image {}/{}".format(i + 1, len(imagePaths)))
         name = imagePath.split(".")[-3]
         # load the input image and convert it from BGR (OpenCV ordering)
         # to dlib ordering (RGB)
@@ -132,8 +222,10 @@ elif mode == 3:
             # Load sample pictures and learn how to recognize it.
             dirname = './dataset'
             files = os.listdir(dirname)
+            print(files)
             for filename in files:
                 name, ext = os.path.splitext(filename)
+                print(name)
                 name = name.split(".")[1]
                 if ext == '.jpg':
                     self.known_face_names.append(name)
@@ -184,7 +276,7 @@ elif mode == 3:
                     # 0.6 is typical best performance.
                     name = "Unknown"
                     print(min_value)
-                    if min_value < 0.6:
+                    if min_value < 0.37:
                         index = np.argmin(distances)
                         name = self.known_face_names[index]
 
@@ -209,6 +301,58 @@ elif mode == 3:
                 cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
             return frame
+
+        def get_frame(self, file_name):
+            # Grab a single frame of video
+            frame = cv2.imread('raw/' + file_name)
+            # Resize frame of video to 1/4 size for faster face recognition processing
+            rgb_small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
+
+            # Convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
+            #rgb_small_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
+
+            # Only process every other frame of video to save time
+            if self.process_this_frame:
+                # Find all the faces and face encodings in the current frame of video
+                self.face_locations = face_recognition.face_locations(rgb_small_frame)
+                self.face_encodings = face_recognition.face_encodings(rgb_small_frame, self.face_locations)
+
+                self.face_names = []
+                for face_encoding in self.face_encodings:
+                    # See if the face is a match for the known face(s)
+                    distances = face_recognition.face_distance(self.known_face_encodings, face_encoding)
+                    min_value = min(distances)
+
+                    # tolerance: How much distance between faces to consider it a match. Lower is more strict.
+                    # 0.6 is typical best performance.
+                    name = "Unknown"
+                    print(min_value)
+                    if min_value < 0.37:
+                        index = np.argmin(distances)
+                        name = self.known_face_names[index]
+
+                    self.face_names.append(name)
+                return self.face_names
+            self.process_this_frame = not self.process_this_frame
+
+            # Display the results
+            # for (top, right, bottom, left), name in zip(self.face_locations, self.face_names):
+            #     # Scale back up face locations since the frame we detected in was scaled to 1/4 size
+            #     top *= 4
+            #     right *= 4
+            #     bottom *= 4
+            #     left *= 4
+            #
+            #     # Draw a box around the face
+            #     cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
+            #
+            #     # Draw a label with a name below the face
+            #     cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
+            #     font = cv2.FONT_HERSHEY_DUPLEX
+            #     cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
+
+
+
 
         def get_jpg_bytes(self):
             frame = self.get_frame()
