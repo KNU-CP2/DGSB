@@ -33,11 +33,10 @@ def set_detected_face(face_id, listOfImage):
                 if cv2.waitKey(1) > 0:
                     break  # 키 입력이 있을 때 반복문 종료
                 elif count >= 100:
-                    return "Success"
                     break  # 100 face sample
             except Exception as e:
                 print(e)
-                return "Fail"
+                return False
 
         print("\n [INFO] Exiting Program and cleanup stuff")
         #learning
@@ -77,9 +76,9 @@ def set_detected_face(face_id, listOfImage):
         f = open(encodingDirectory, "wb")
         f.write(pickle.dumps(data))
         f.close()
-        return "Success"
+        return True
     except Exception as e:
-        return "Fail"
+        return False
 
 def get_detected_face(file_name):
     face_recog = FaceRecog()
