@@ -1,10 +1,6 @@
 # -*- coding: cp949 -*-
 import cv2
 import numpy as np
-# from scipy.ndimage import interpolation as inter
-
-#open source exmaple 사용해보기
-# 나중에 이해해야됨
 
 class ProcessImage:
 
@@ -21,4 +17,3 @@ class ProcessImage:
         gry_img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         Hist_img = cv2.equalizeHist(gry_img)
         return Hist_img
-
