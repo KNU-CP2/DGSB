@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from photos.views import get_detection
+from photos.views import get_detection, register_face
 
 import sys
 sys.path.append("..")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/handle-detection/', get_detection)
+    path('api/handle-detection/', get_detection),
+    path('api/register-face/', register_face)
 ]
