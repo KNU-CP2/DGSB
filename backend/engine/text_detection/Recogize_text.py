@@ -6,8 +6,9 @@ import pytesseract
 import regex
 import math
 
-from .Process_img import ProcessImage
-#from Searchword import SearchKorWord
+#import Searchword
+
+from Process_img import ProcessImage
 
 # pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
@@ -15,15 +16,17 @@ from .Process_img import ProcessImage
 class Text() :
 
     __word = ''
-
+   
+     ########################
     def is_detected(self):
-        if self.__word:
+        if self.__word :
             return True
         return False
-
+    
     def return_word(self):
         return self.__word
 
+    #############################
     def clear_word(self):
         self.__word = ''
 
@@ -79,13 +82,19 @@ class Text() :
         possible_contour = []
         contour = []
         last_contour = []
-
-        for i in range(len(results['text'])):
+        
+        #print(results['text'])
+        
+        for i in range(len(results['text'])): 
             conf = float(results['conf'][i])
                
             
             # 정확도가 70 이상이면
             if conf >= 70 :
+
+                #if results["text"][i] :
+                #    print("%s %s"%(results["conf"][i], results["text"][i]))
+
                 t_x = results["left"][i]
                 t_y = results["top"][i]
                 t_width = results["width"][i]
@@ -103,7 +112,7 @@ class Text() :
                     
                     last_x, last_y, last_width, last_height = last_contour
 
-                    if (t_x - (last_x+last_width) <= 3) and (abs((t_y + t_height)/2 - (last_y + last_height)/2)<=3):       
+                    if (t_x - (last_x+last_width) <= 10) and (abs((t_y + t_height)/2 - (last_y + last_height)/2)<= 10):       
                         # x , y , width, height, text
                         contour[0] = min(contour[0],t_x)
                         contour[1] = min(contour[1],t_y)
@@ -132,21 +141,35 @@ class Text() :
  
         #2
         gry_img = ProcessImage.extract_for_Gray(image)
+<<<<<<< Updated upstream
       
         results_bgr = pytesseract.image_to_data(bgr_img, lang="eng+kor", output_type=pytesseract.Output.DICT)
         results_gry = pytesseract.image_to_data(gry_img, lang="eng+kor", output_type=pytesseract.Output.DICT)
         
+=======
+        
+        #3
+        org_img = image
+
+        results_bgr = pytesseract.image_to_data(bgr_img, lang="ENG+KOR", output_type=pytesseract.Output.DICT)
+        results_gry = pytesseract.image_to_data(gry_img, lang="ENG+KOR", output_type=pytesseract.Output.DICT)
+        results_org = pytesseract.image_to_data(org_img, lang="ENG+KOR", output_type=pytesseract.Output.DICT)
+
+>>>>>>> Stashed changes
         possible_contour = []
         
         possible_contour = self.Make_PossibleContour(results_bgr)
         possible_contour = possible_contour + self.Make_PossibleContour(results_gry)
-        
+        possible_contour = possible_contour + self.Make_PossibleContour(results_org)
+
         near_word = ''
         max_dist = 10000
 
         # 박스 그리기용
         one_word_box = [0,0,0,0]
+        
 
+        #word_list = []
 
         for c in possible_contour :      
             if c :
@@ -157,18 +180,32 @@ class Text() :
                                          incline, intercept, start, end):
                     
                     now_dist = self.word_dist(x,y,width,height,end) 
-                    if(max_dist > now_dist):
+                    #print("now_dist %f"%(now_dist))
+                    
+                    if max_dist > now_dist :
                         near_word = word
                         one_word_box = [x, y, width, height]
                         max_dist = now_dist
-                    
-                 
-        # 손가락에서 가장 가까운 단어가 추출됐다면 
-        if near_word :
-            # if near_word == self.__word:
-            #     print("already found")
-            #     return
 
+                        #test
+                        #temp = [word , len(word)]
+                        #word_list.append(temp)
+                    
+        
+        
+        #print("word_list")
+        #print(word_list)
+        
+        # 손가락에서 가장 가까운 단어가 추출됐다면 
+        if near_word :    
+            #if self.is_hanguel(near_word) :
+            #    near_word = SearchKorWord(near_word)
+            
+            if near_word == self.__word :
+                print("already found")
+                return 
+
+            #print("최종 검출 단어 : " + near_word)
             self.__word = near_word
             image = cv2.rectangle(image,(one_word_box[0],one_word_box[1]),
                                     (one_word_box[0]+one_word_box[2],one_word_box[1]+one_word_box[3]),(255,255,0),1)
