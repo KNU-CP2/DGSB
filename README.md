@@ -19,12 +19,12 @@
 Notion: <https://www.notion.so/a82b75788d374d658dd19d8fd27d2f56>
 
 ## Main features
-- 손가락 지칭 기반 텍스트 인식
+### 손가락 지칭 기반 텍스트 인식
 
-- 얼굴인식
+### 얼굴인식
 
-- 물체인식
-Yolo v3기반 물체인식 모듈 개발
+### 물체인식 
+- Yolo v3기반 물체인식 모듈 개발
 
 ## How to run
 ### Local Server
