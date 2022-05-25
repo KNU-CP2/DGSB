@@ -1,5 +1,5 @@
 # DGSB
-물체, 텍스트, 사람 등 일반적인 사람이 얻을 수 있는 시각 정보들을 시각 장애인들에게 음성 형태로 전달하는 가이드 서비스
+Guide service that delivers visual information that can be obtained by ordinary people, such as objects, text, and people, in voice form to the visually impaired  
 ### Team Collaboration
 Notion: <https://www.notion.so/a82b75788d374d658dd19d8fd27d2f56>
 
@@ -19,13 +19,17 @@ Notion: <https://www.notion.so/a82b75788d374d658dd19d8fd27d2f56>
 - Docker
 
 ## Main features
-### 손가락 지칭 기반 텍스트 인식
-
-### 얼굴인식
-
-### 물체인식 
-- Yolo v3기반 물체인식 모듈 개발
-
+### Finger pointing-based text recognition
+- Image preprocessing for text recognition  
+- Checking the presence of text in pointing direction  
+### Face recognition
+- Cropping Faces from Images using OpenCV
+- Face recognition using Haar Algorithm
+- Register faces with cropped face images 
+- Get face features using Histogram of Gradient (HoG)  
+### Object recognition 
+- Development of an Object Identification Module Based on Yolo v3  
+- 
 ## How to run
 ### Local Server
 1. `$ cd backend`
