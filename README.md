@@ -29,7 +29,7 @@ Notion: <https://www.notion.so/a82b75788d374d658dd19d8fd27d2f56>
 - Get face features using Histogram of Gradient (HoG)  
 ### Object recognition 
 - Development of an Object Identification Module Based on Yolo v3  
-- 
+
 ## How to run
 ### Local Server
 1. `$ cd backend`
@@ -56,4 +56,10 @@ Notion: <https://www.notion.so/a82b75788d374d658dd19d8fd27d2f56>
 
 ### [황하연]
 - [Client] Mobile application
-- [DevOps] Deployment application on android market
+- [DevOps] Deployment application on android market   
+
+## Expectation effectiveness    
+- Conversion of daily text information (menu, information board, book) into voice information to solve the problem of restricting users' information acquisition  
+- The person recognition function enables smooth communication with society by recognizing acquaintances quickly and conveniently  
+- In the test and prototyping process, the service is implemented as an app, and it can be used in the form of attaching it to glasses based on the engine released later  
+- The development process and code are open-source so that various people interested in computer vision can refer to or use it  
