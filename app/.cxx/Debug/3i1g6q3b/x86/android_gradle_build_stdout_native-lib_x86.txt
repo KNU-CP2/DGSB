@@ -1,0 +1,3 @@
+ninja: Entering directory `D:\Users\yunyo\teamproject6\app\.cxx\Debug\3i1g6q3b\x86'
+[1/2] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
+[2/2] Linking CXX shared library D:\Users\yunyo\teamproject6\app\build\intermediates\cxx\Debug\3i1g6q3b\obj\x86\libnative-lib.so

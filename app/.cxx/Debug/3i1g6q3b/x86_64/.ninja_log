@@ -1,0 +1,11 @@
+# ninja log v5
+10	813	669921409	build.ninja	ef247ab7dcdb39d1
+0	35	0	clean	577bc002c0bafc13
+0	51	0	clean	577bc002c0bafc13
+6	513	669921487	build.ninja	ef247ab7dcdb39d1
+2	4373	669921492	CMakeFiles/native-lib.dir/native-lib.cpp.o	6729f2e267a2cdbe
+4389	5329	669921493	D:/Users/yunyo/teamproject6/app/build/intermediates/cxx/Debug/3i1g6q3b/obj/x86_64/libnative-lib.so	8535f8ad2380960a
+0	45	0	clean	577bc002c0bafc13
+0	44	0	clean	577bc002c0bafc13
+16	12009	670060467	CMakeFiles/native-lib.dir/native-lib.cpp.o	6729f2e267a2cdbe
+12010	13748	670060469	D:/Users/yunyo/teamproject6/app/build/intermediates/cxx/Debug/3i1g6q3b/obj/x86_64/libnative-lib.so	8535f8ad2380960a

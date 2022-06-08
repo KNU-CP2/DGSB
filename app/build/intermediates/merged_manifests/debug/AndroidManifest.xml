@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.teamproject6"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="31" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.example.teamproject6.ApplicationController"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_main"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_main_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.Teamproject6" >
+        <activity
+            android:name="com.example.teamproject6.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.teamproject6.CameraActivity"
+            android:label="카메라 실행" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.teamproject6.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>

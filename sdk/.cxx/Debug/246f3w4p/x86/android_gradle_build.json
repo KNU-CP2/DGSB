@@ -1,0 +1,39 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "D:\\Users\\yunyo\\teamproject6\\sdk\\libcxx_helper\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "D:\\Users\\yunyo\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+      "-C",
+      "D:\\Users\\yunyo\\teamproject6\\sdk\\.cxx\\Debug\\246f3w4p\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "D:\\Users\\yunyo\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "-C",
+    "D:\\Users\\yunyo\\teamproject6\\sdk\\.cxx\\Debug\\246f3w4p\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "opencv_jni_shared-Debug-x86": {
+      "buildCommandComponents": [
+        "D:\\Users\\yunyo\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "-C",
+        "D:\\Users\\yunyo\\teamproject6\\sdk\\.cxx\\Debug\\246f3w4p\\x86",
+        "opencv_jni_shared"
+      ],
+      "buildType": "debug",
+      "abi": "x86",
+      "artifactName": "opencv_jni_shared",
+      "output": "D:\\Users\\yunyo\\teamproject6\\sdk\\.cxx\\Debug\\246f3w4p\\x86\\libopencv_jni_shared.a"
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

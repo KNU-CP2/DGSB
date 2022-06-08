@@ -1,0 +1,15 @@
+# ninja log v5
+4	11877	669920746	CMakeFiles/native-lib.dir/native-lib.cpp.o	899ee7d28331c9ac
+11893	13762	669920748	D:/Users/yunyo/teamproject6/app/build/intermediates/cxx/Debug/3i1g6q3b/obj/arm64-v8a/libnative-lib.so	2b6be410dadef08a
+0	51	0	clean	577bc002c0bafc13
+0	65	0	clean	577bc002c0bafc13
+22	11619	669921479	CMakeFiles/native-lib.dir/native-lib.cpp.o	899ee7d28331c9ac
+11620	12676	669921480	D:/Users/yunyo/teamproject6/app/build/intermediates/cxx/Debug/3i1g6q3b/obj/arm64-v8a/libnative-lib.so	2b6be410dadef08a
+1	40	0	clean	577bc002c0bafc13
+0	43	0	clean	577bc002c0bafc13
+20	5246	670060449	CMakeFiles/native-lib.dir/native-lib.cpp.o	899ee7d28331c9ac
+5246	6240	670060450	D:/Users/yunyo/teamproject6/app/build/intermediates/cxx/Debug/3i1g6q3b/obj/arm64-v8a/libnative-lib.so	2b6be410dadef08a
+43	8658	670067146	CMakeFiles/native-lib.dir/native-lib.cpp.o	899ee7d28331c9ac
+8659	9945	670067148	D:/Users/yunyo/teamproject6/app/build/intermediates/cxx/Debug/3i1g6q3b/obj/arm64-v8a/libnative-lib.so	2b6be410dadef08a
+29	5634	670278744	CMakeFiles/native-lib.dir/native-lib.cpp.o	899ee7d28331c9ac
+5635	6549	670278745	D:/Users/yunyo/teamproject6/app/build/intermediates/cxx/Debug/3i1g6q3b/obj/arm64-v8a/libnative-lib.so	2b6be410dadef08a

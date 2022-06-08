@@ -1,0 +1,7 @@
+[
+{
+  "directory": "D:/Users/yunyo/teamproject6/app/.cxx/Debug/3i1g6q3b/x86_64",
+  "command": "D:\\Users\\yunyo\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android21 --gcc-toolchain=D:/Users/yunyo/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Users/yunyo/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -ID:/Users/yunyo/teamproject6/sdk/native/jni/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -std=gnu++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\native-lib.dir\\native-lib.cpp.o -c D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\cpp\\native-lib.cpp",
+  "file": "D:\\Users\\yunyo\\teamproject6\\app\\src\\main\\cpp\\native-lib.cpp"
+}
+]
